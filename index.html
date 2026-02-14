@@ -222,6 +222,19 @@ document.querySelector(".buttons").addEventListener("mouseleave", () => {
 /* YES click */
 yesBtn.addEventListener("click", function () {
 
+  const music = document.getElementById("bgMusic");
+
+    music.volume = 0; 
+    music.play();
+
+    let fade = setInterval(() => {
+        if (music.volume < 1) {
+            music.volume += 0.02;   // controls fade speed
+        } else {
+            clearInterval(fade);
+        }
+    }, 100);
+
   yesBtn.style.opacity = "0";
   yesBtn.style.pointerEvents = "none";
 
@@ -279,4 +292,5 @@ function startFlowers() {
 </body>
 
 </html>
+
 
