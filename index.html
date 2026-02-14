@@ -106,7 +106,7 @@ button {
 
 /* Celebration Text */
 .celebrationText {
-  position: absolute;
+  position: relative;
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -282,7 +282,7 @@ yesBtn.addEventListener("click", function () {
 /* Continuous Confetti */
 function startConfetti() {
   setInterval(() => {
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 15; i++) {
       let conf = document.createElement("div");
       conf.className = "confetti";
       conf.style.left = Math.random() * 100 + "vw";
@@ -290,7 +290,7 @@ function startConfetti() {
       conf.style.background =
         `linear-gradient(${Math.random()*360}deg, #f7d046, #d4af37)`;
       conf.style.animationDuration =
-        (2 + Math.random() * 2) + "s";
+        (2 + Math.random() * 5) + "s";
       document.body.appendChild(conf);
       setTimeout(() => conf.remove(), 4000);
     }
@@ -307,7 +307,7 @@ function startFlowers() {
       flower.style.left = Math.random() * 100 + "vw";
       flower.style.fontSize = (20 + Math.random()*12) + "px";
       flower.style.animationDuration =
-        (4 + Math.random() * 3) + "s";
+        (4 + Math.random() * 5) + "s";
       document.body.appendChild(flower);
       setTimeout(() => flower.remove(), 7000);
     }
@@ -319,6 +319,7 @@ function startFlowers() {
 </body>
 
 </html>
+
 
 
 
